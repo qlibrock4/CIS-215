@@ -50,6 +50,7 @@
         
         
         <fieldset>
+            <label>Gender:</label>
             <select name="gender" id="gender">
                 <option value="m">Male</option>
                 <option value="f">Female</option>
