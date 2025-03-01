@@ -53,6 +53,8 @@
 
 <!-- TODO: Add your own survey questions -->
 
+
+<button type="submit" name="submit-button" id="submit-button">Submit</button>
 </form>
 
 <!-- TODO: All the backend PHP/SQL stuff! (you may need a separate file for this!) -->
