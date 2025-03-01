@@ -1,3 +1,4 @@
+<html>
 <!DOCTYPE html>
 <html lang="eng-US">
     <head>
@@ -62,8 +63,18 @@
         
         
         <!-- TODO: Add your own survey questions -->
-        <label> </label>
+        <fieldset>
+            <label>What makes you happy? </label>
+            <input type="text" name="happy" id="what">
+        </fieldset>
 
+            
+        
+        
+        
+        
+        
+        
             <button type="submit" name="submit-button" id="submit-button">Submit</button>
         </form>
 
