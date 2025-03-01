@@ -15,31 +15,31 @@
 <input type="text" name="pw-name" id="pw-id">
 
 <label>What age are you? </label>
-<input type="radio" name="0" id="1">
+<input type="radio" name="age" id="1">
 <label>0-12 </label>
-<input type="radio" name="1" id="1">
+<input type="radio" name="age" id="2">
 <label>13-17 </label>
-<input type="radio" name="2" id="1">
+<input type="radio" name="age" id="3">
 <label>18-22 </label>
-<input type="radio" name="3" id="1">
+<input type="radio" name="age" id="4">
 <label>23-27 </label>
-<input type="radio" name="4" id="1">
+<input type="radio" name="age" id="5">
 <label>28-32 </label>
-<input type="radio" name="5" id="1">
+<input type="radio" name="age" id="6">
 <label>33-37 </label>
-<input type="radio" name="6" id="1">
+<input type="radio" name="age" id="7">
 <label>38-42 </label>
-<input type="radio" name="7" id="1">
+<input type="radio" name="age" id="8">
 <label>43-47 </label>
-<input type="radio" name="8" id="1">
+<input type="radio" name="age" id="9">
 <label>48-52 </label>
-<input type="radio" name="9" id="1">
+<input type="radio" name="age" id="10">
 <label>53-57 </label>
-<input type="radio" name="10" id="1">
+<input type="radio" name="age" id="11">
 <label>58-62 </label>
-<input type="radio" name="11" id="1">
+<input type="radio" name="age" id="12">
 <label>63-67 </label>
-<input type="radio" name="12" id="1">
+<input type="radio" name="age" id="13">
 <label>68+ </label>
 
 <select name="gender" id="gender">
@@ -55,6 +55,7 @@
 
 
 <button type="submit" name="submit-button" id="submit-button">Submit</button>
+
 </form>
 
 <!-- TODO: All the backend PHP/SQL stuff! (you may need a separate file for this!) -->
