@@ -69,7 +69,10 @@
             <input type="text" name="happy" id="what">
         </fieldset>
 
-            
+        <fieldset>
+            <label for="how">On a scale of 1-10 how happy are you?</label>
+            <input type="number" id="how" name="how" min="1" max="10"/>
+        </fieldset>
         
         
         
