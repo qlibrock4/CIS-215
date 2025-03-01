@@ -10,7 +10,7 @@
 
         include("Project1.php");
 
-        if(password_verify($_POST["pwd-name"], "$2y$10\$RMUPbc4ZpKMCot4fIkCzGuoB6qwXj6PsU4vfY3ZAT1KLZ9rStcdHm")){
+        if(password_verify($_POST["pw-name"], "$2y$10\$RMUPbc4ZpKMCot4fIkCzGuoB6qwXj6PsU4vfY3ZAT1KLZ9rStcdHm")){
             echo("Thank you for your submission");
         } else {
             echo("Incorrect Password Entered. Please Try again.");

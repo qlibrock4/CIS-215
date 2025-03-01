@@ -64,8 +64,8 @@
         
         <!-- TODO: Add your own survey questions -->
         <fieldset>
-            <label>What makes you happy? </label>
-            <input type="text" name="happy" id="what">
+            <label for="happy"> What makes you happy? </label>
+            <input type="text" name="happy" id="happy" required minlength="1" maxlength="100" size="10">
         </fieldset>
 
         <fieldset>
