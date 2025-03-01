@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <form action="submit.php" method="post" class="survey form">
+            <fieldset> 
+                <legend>Contact Info</legend>
+                    <label for="name-input">What is your name?</label>
+                <input type="text" name="name" id="name-input">
+
+                <label for="email-input">What is your email?</label>
+                <input type="email" name="email" id="email-input">
+            </fieldset>
+            
+            
+            
+            <fieldset>
+                <legend>What is your favorite game?</legend>
+                <input type="radio" name="game" id="Fortnite" value="1"> <label for="Fortnite">Fortnite</label>
+            </fieldset>
+            
+            
+            <label for="timesplayed">How many times have you played?</label>
+            <select name="numbergames" id="numbergames">
+                <option value="2">3</option>
+            </select>
+
+            <button type="submit" name="submit-button" id="submit-button">Submit</button>
+        </form>
+
+    </body>
+
+
+</html>
