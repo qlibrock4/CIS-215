@@ -6,7 +6,7 @@
 
 
 <!-- TODO: Fix all bugs/poor practice in the form -->
-<form action="" method="get" class="survey">
+<form action="submit.php" method="post" class="survey">
 
 <label>Enter your email: </label>
 <input type="email" name="email-name" id="email-id">
