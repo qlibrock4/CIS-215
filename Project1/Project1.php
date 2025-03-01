@@ -9,7 +9,7 @@
 <form action="submit.php" method="post" class="survey">
 
 <label>Enter your email: </label>
-<input type="email" name="email-name" id="email-id">
+<input type="email" name="email" id="email-input">
 
 <label>Enter your password: </label>
 <input type="text" name="pw-name" id="pw-id">
