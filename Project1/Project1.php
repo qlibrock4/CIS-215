@@ -8,7 +8,7 @@
     
     <body>
         <p>Happiness Survey</p>
-        <form action="submit.php" method="post" class="survey">
+        <form action="submitt.php" method="post" class="survey">
             <fieldset>
                 <label>Enter your email: </label>
                 <input type="email" name="email" id="email-input">
