@@ -21,6 +21,8 @@
         $happy = $_POST["happy"];
         if(is_numeric($happy)){
             print("<p>Enter Valid Statement to: What makes you happy?</p>");
+        } else {
+            print("<p>Submission Recieved</p>");
         }
     ?>
 
