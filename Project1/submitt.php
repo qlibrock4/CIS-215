@@ -8,22 +8,27 @@
         ini_set('display_errors', 1);
         error_reporting(E_ALL);
 
-        include("Project1.php");
+        function passwd(){
+            include("Project1.php");
 
-        if(password_verify($_POST["pw-name"], "$2y$10\$RMUPbc4ZpKMCot4fIkCzGuoB6qwXj6PsU4vfY3ZAT1KLZ9rStcdHm")){
-            echo("Password is Correct");
-        } else {
-            echo("Incorrect Password Entered. Please Try again.");
+            if(password_verify($_POST["pw-name"], "$2y$10\$RMUPbc4ZpKMCot4fIkCzGuoB6qwXj6PsU4vfY3ZAT1KLZ9rStcdHm")){
+                echo("Password is Correct");
+            } else {
+                echo("Incorrect Password Entered. Please Try again.");
+            }
         }
     ?>
 
     <?php
-        $happy = $_POST["happy"];
-        if(is_numeric($happy)){
-            print("<p>Enter Valid Statement to: What makes you happy?</p>");
-        } else {
-            print("<p>Submission Recieved</p>");
+        function happyquestion(){
+            $happy = $_POST["happy"];
+            if(is_numeric($happy)){
+                print("<p>Enter Valid Statement to: What makes you happy?</p>");
+            } else {
+                print("<p>Submission Recieved</p>");
+            }
         }
+        
     ?>
 
 
