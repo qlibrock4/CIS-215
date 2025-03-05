@@ -22,7 +22,11 @@
         if(is_null($email)){
             echo ("Enter valid email.");
         }
-    
+
+        $how = $_POST["how"];
+        if(is_null($how)){
+            echo ("Enter how you feel.")
+        } 
 
     
     
