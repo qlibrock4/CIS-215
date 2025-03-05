@@ -18,7 +18,10 @@
             echo("Incorrect/Invalid Password Entered. Please Try again.");
         }
 
-        
+        $email = $_POST["email"];
+        if(is_null($email)){
+            echo ("Enter valid email.");
+        }
     
 
     
