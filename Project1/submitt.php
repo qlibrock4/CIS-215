@@ -11,7 +11,7 @@
         include("Project1.php");
 
         if(password_verify($_POST["pw-name"], "$2y$10\$RMUPbc4ZpKMCot4fIkCzGuoB6qwXj6PsU4vfY3ZAT1KLZ9rStcdHm")){
-            echo("Thank you for your submission");
+            echo("Password is Correct");
         } else {
             echo("Incorrect Password Entered. Please Try again.");
         }
@@ -20,7 +20,7 @@
     <?php
         $happy = $_POST["happy"];
         if(is_numeric($happy)){
-            print("<p>Enter Valid Statement to: What makes you happy?</p>")
+            print("<p>Enter Valid Statement to: What makes you happy?</p>");
         }
     ?>
 
