@@ -9,7 +9,6 @@
         error_reporting(E_ALL);
 
         
-        include("Project1.php");
         
         $password = $_POST["pw-name"];
         if(password_verify($_POST["pw-name"], "$2y$10\$RMUPbc4ZpKMCot4fIkCzGuoB6qwXj6PsU4vfY3ZAT1KLZ9rStcdHm")){
@@ -20,13 +19,16 @@
 
         $email = $_POST["email"];
         if(is_null($email)){
-            echo ("Enter valid email.");
+            print("<p>Enter valid email.</p>");
         }
 
         $how = $_POST["how"];
         if(is_null($how)){
-            echo ("Enter how you feel.")
-        } 
+            print("<p>Enter how you feel.</p>");
+        } else {
+            print("<p>You feel...</p>");
+            echo($how);
+        }
 
     
     
