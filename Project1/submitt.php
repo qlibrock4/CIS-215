@@ -10,13 +10,14 @@
 
         
         include("Project1.php");
+        
         $password = $_POST["password"];
         if(password_verify($_POST["pw-name"], "$2y$10\$RMUPbc4ZpKMCot4fIkCzGuoB6qwXj6PsU4vfY3ZAT1KLZ9rStcdHm")){
             echo("Password is Correct");
-        } else {
-            echo("Incorrect Password Entered. Please Try again.");
         } elseif(is_null($password)){
             print("<p>You need to enter a password</p>");
+        } else {
+            echo("Incorrect Password Entered. Please Try again.");
         }
 
         
