@@ -15,10 +15,15 @@
         } else {
             echo("Incorrect Password Entered. Please Try again.");
         }
-
-
     ?>
-    
+
+    <?php
+        $happy = $_POST["happy"];
+        if(is_numeric($happy)){
+            print("<p>Enter Valid Statement to: What makes you happy?</p>")
+        }
+    ?>
+
 
     </body>
 
