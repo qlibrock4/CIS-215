@@ -5,16 +5,18 @@
     </head>
     <body>
     <?php
-        include 'dbconfig.php';
-        $db = connectDB();
-        $db->query("CREATE TABLE project_one (id INT PRIMARY KEY AUTO_INCREMENT, email VARCHAR(20), 
-        scale VARCHAR(20), makes VARCHAR(20), gender VARCHAR(20));");
-
-        $insert_data = $db->prepare("INSERT INTO project_one (email, scale, makes, gender) VALUES (?);");
-        
-        
         ini_set('display_errors', 1);
         error_reporting(E_ALL);
+        
+        
+        
+        include 'dbconfig.php';
+        $db = connectDB();
+
+        $insert_data = $db->prepare("INSERT INTO project (email, how, happy, gender) VALUES (?, ?, ?, ?);");
+        
+        
+
 
         
         
@@ -26,11 +28,8 @@
         }
 
         $email = $_POST["email"];
-        if(is_null($email)){
-            print("<p>Enter valid email.</p>");
-        } else{
-            insert_data->execute(array($email))
-        }
+        $insert_data->execute(array($email));
+        
 
         $how = $_POST["how"];
         if(is_null($how)){
@@ -38,7 +37,7 @@
         } else {
             print("<p>You feel...</p>");
             echo($how);
-            insert_data->execute(array($how))
+            $insert_data->execute(array($how));
         }
 
     
@@ -49,6 +48,7 @@
         } else {
             print("<p>What made you happy?</p>");
             echo($happy);
+            $insert_data->execute(array($happy));
         }
         
 
@@ -56,11 +56,15 @@
         if(!is_null($gender)){
             print("<p>The gender you chose is:</p>");
             echo($gender);
+            $insert_data->execute(array($gender));
         
         } else {
             echo("Enter valid gender.");
         }
         
+        $query = "SELECT * FROM project;";
+        echo $query;
+
     ?>
 
 
