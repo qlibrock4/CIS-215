@@ -41,13 +41,11 @@
             echo($email);
         }
         
-        $how = $_POST["how"];
         if(is_null($how)){
             print("<p>Enter how you feel.</p>");
         } else {
             print("<p>You feel...</p>");
             echo($how);
-            $insert_data->execute(array($how));
         }
 
     
@@ -58,7 +56,6 @@
         } else {
             print("<p>What made you happy?</p>");
             echo($happy);
-            $insert_data->execute(array($happy));
         }
         
 
@@ -66,7 +63,6 @@
         if(!is_null($gender)){
             print("<p>The gender you chose is:</p>");
             echo($gender);
-            $insert_data->execute(array($gender));
         
         } else {
             echo("Enter valid gender.");
@@ -76,12 +72,13 @@
             $insert_data->execute(array($email, $how, $happy, $gender));
         }
         
-        $select = $db->prepare("SELECT * FROM project");
+        $select = $db->prepare("SELECT * FROM project;");
         $select->execute();
-        $info_row = $select->fetch();  # would retrieve first row in data
-        $info_next_row = $select->fetch();  # would retrieve next row in data
+        $info = $select->fetchAll();  # would retrieve all rows in data
+
         
-        echo($info_row);
+        $row = implode(", ", $info);
+        echo($row);
 
     
     
