@@ -12,12 +12,15 @@
                 <label>Enter your email: </label>
                 <input type="email" name="email" id="email-input">
             </fieldset>
+<!-- Tested my own email to the form, as well as tested random letters such as "fgfgfgg" the email worked perfectly
+ however, the fgfgfgg did not work and actually displays "please use @"--> 
 
             <fieldset>
                 <label>Enter your password: </label>
                 <input type="text" name="pw-name" id="pw-id">
             </fieldset>
-            
+            <!-- I added the right password CIS125Survey! which displayed password is correct on the submit form, but adding wrong one 
+             displays "password incorrect"--> 
             <fieldset>
                 <label>What age are you? </label>
                 <input type="radio" name="age" id="1">
@@ -47,7 +50,7 @@
                 <input type="radio" name="age" id="13">
                 <label>68+ </label>
             </fieldset>
-        
+        <!-- This one I just input every age and they all seemed to work--> 
         
         
         <fieldset>
@@ -61,7 +64,7 @@
                 <option value="o">Choose not to say/Other</option>
             </select>
         </fieldset>
-        
+        <!-- Same as age, every gender worked/came out right--> 
         
         
         <!-- TODO: Add your own survey questions -->
@@ -69,7 +72,7 @@
             <label for="happy"> What makes you happy? </label>
             <input type="text" name="happy" id="happy" required minlength="1" maxlength="100" size="10">
         </fieldset>
-
+<!-- Adding nothing displays please add something to that part, but adding anything else pretty much works--> 
         <fieldset>
             <label for="how">On a scale of 1-10 how happy are you?</label>
             <input type="number" id="how" name="how" min="1" max="10"/>
