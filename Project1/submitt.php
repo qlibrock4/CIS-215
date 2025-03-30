@@ -9,11 +9,12 @@
         error_reporting(E_ALL);
         
         
-        
         include 'dbconfig.php';
         $db = connectDB();
 
         $insert_data = $db->prepare("INSERT INTO project (email, how, happy, gender) VALUES (?, ?, ?, ?);");
+
+        
         
         
 
@@ -27,10 +28,19 @@
             echo("Incorrect/Invalid Password Entered. Please Try again.");
         }
 
-        $email = $_POST["email"];
-        $insert_data->execute(array($email));
         
+        $email = $_POST["email"];
+        $how = $_POST["how"];
+        $happy = $_POST["happy"];
+        $gender = $_POST["gender"];
 
+        if(is_null($email)){
+            print("<p>Email is required");
+        } else {
+            print("<p>Email:</p>");
+            echo($email);
+        }
+        
         $how = $_POST["how"];
         if(is_null($how)){
             print("<p>Enter how you feel.</p>");
@@ -62,9 +72,16 @@
             echo("Enter valid gender.");
         }
         
+        if (!is_null($email) && !is_null($how) && !is_null($happy) && !is_null($gender)) {
+            $insert_data->execute(array($email, $how, $happy, $gender));
+        }
+        
         $query = "SELECT * FROM project;";
-        echo $query;
+        echo $query . "<br>";
 
+
+    
+    
     ?>
 
 
