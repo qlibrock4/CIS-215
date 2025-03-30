@@ -76,9 +76,12 @@
             $insert_data->execute(array($email, $how, $happy, $gender));
         }
         
-        $query = "SELECT * FROM project;";
-        echo $query . "<br>";
-
+        $select = $db->prepare("SELECT * FROM project");
+        $select->execute();
+        $info_row = $select->fetch();  # would retrieve first row in data
+        $info_next_row = $select->fetch();  # would retrieve next row in data
+        
+        echo($info_row);
 
     
     
